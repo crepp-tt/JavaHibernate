@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="442.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ManageConfUserController">
+   <children>
+      <Pane prefHeight="78.0" prefWidth="700.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <Label layoutX="67.0" layoutY="27.0" prefHeight="24.0" prefWidth="151.0" text="Quản lý hội nghị" textFill="#23428a">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="17.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="choose" layoutX="237.0" layoutY="29.0" prefHeight="24.0" prefWidth="151.0" />
+            <TextField fx:id="searchText" layoutX="408.0" layoutY="29.0" prefHeight="25.0" prefWidth="225.0" promptText="Tìm kiếm hội nghị" styleClass="text-input" stylesheets="@../css/fullpackstyling.css" />
+            <Button layoutX="641.0" layoutY="28.0" mnemonicParsing="false" onAction="#search" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/search_20px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+      <TableView fx:id="tableView" layoutY="78.0" prefHeight="364.0" prefWidth="700.0" style="-fx-background-color: #ffffff;">
+        <columns>
+          <TableColumn fx:id="name" prefWidth="109.0" text="Tên hội nghị" />
+          <TableColumn fx:id="address" prefWidth="132.0" text="Địa điểm" />
+            <TableColumn fx:id="startTime" prefWidth="150.0" text="Bắt đầu" />
+            <TableColumn fx:id="endTime" prefWidth="139.0" text="Kết thúc" />
+            <TableColumn fx:id="status" prefWidth="89.0" text="Trạng thái" />
+            <TableColumn fx:id="action" text="Thao tác" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

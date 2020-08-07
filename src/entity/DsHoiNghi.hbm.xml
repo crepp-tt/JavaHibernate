@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 31, 2020 10:02:53 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="entity.DsHoiNghi" table="ds_hoi_nghi" catalog="ql_hoi_nghi" optimistic-lock="version">
+        <id name="idHoiNghi" type="int">
+            <column name="id_hoi_nghi" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="diaDiem" class="entity.DiaDiem" fetch="select" lazy="false">
+            <column name="dia_diem" not-null="true" />
+        </many-to-one>
+        <property name="tenHoiNghi" type="string">
+            <column name="ten_hoi_nghi" length="45" not-null="true" />
+        </property>
+        <property name="moTa" type="string">
+            <column name="mo_ta" length="45" not-null="true" />
+        </property>
+        <property name="moTaChiTiet" type="string">
+            <column name="mo_ta_chi_tiet" length="45" not-null="true" />
+        </property>
+        <property name="thoiGian" type="timestamp">
+            <column name="thoi_gian" length="19" not-null="true" />
+        </property>
+        <property name="thoiGianKt" type="timestamp">
+            <column name="thoi_gian_kt" length="19" />
+        </property>
+        <property name="hinhAnh" type="binary">
+            <column name="hinh_anh" not-null="true" />
+        </property>
+        <set name="thamGiaHns" table="tham_gia_hn" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="id_hoi_nghi" not-null="true" />
+            </key>
+            <one-to-many class="entity.ThamGiaHn" />
+        </set>
+    </class>
+</hibernate-mapping>

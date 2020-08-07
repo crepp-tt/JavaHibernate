@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="452.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ConfListController">
+   <children>
+      <Pane prefHeight="78.0" prefWidth="700.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <Label layoutX="67.0" layoutY="27.0" prefHeight="24.0" prefWidth="151.0" text="Danh sách hội nghị" textFill="#23428a">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="17.0" />
+               </font></Label>
+         </children>
+      </Pane>
+      <ListView fx:id="confListView" layoutY="78.0" prefHeight="374.0" prefWidth="700.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="442.0" prefWidth="700.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ChangeConfController">
+   <children>
+      <Label layoutX="23.0" layoutY="151.0" prefHeight="26.0" prefWidth="83.0" text="Mô tả">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font></Label>
+      <Button layoutX="439.0" layoutY="376.0" mnemonicParsing="false" onAction="#change" prefHeight="32.0" prefWidth="67.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="Sửa" />
+      <Label layoutX="23.0" layoutY="106.0" prefHeight="26.0" prefWidth="102.0" text="Tên hội nghị">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font></Label>
+      <ImageView fx:id="imageView" fitHeight="122.0" fitWidth="150.0" layoutX="37.0" layoutY="304.0" pickOnBounds="true" preserveRatio="true" />
+      <TextField fx:id="name" layoutX="123.0" layoutY="106.0" prefHeight="26.0" prefWidth="180.0" />
+      <TextField fx:id="desc" layoutX="123.0" layoutY="153.0" prefHeight="26.0" prefWidth="180.0" />
+      <Label layoutX="23.0" layoutY="205.0" prefHeight="26.0" prefWidth="83.0" text="Mô tả chi tiết">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font></Label>
+      <TextField fx:id="longDesc" layoutX="123.0" layoutY="201.0" prefHeight="26.0" prefWidth="180.0" />
+      <ComboBox fx:id="address" layoutX="112.0" layoutY="258.0" prefWidth="150.0" />
+      <Label layoutX="23.0" layoutY="263.0" prefHeight="26.0" prefWidth="73.0" text="Địa điểm">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font></Label>
+      <DatePicker fx:id="dateStart" layoutX="436.0" layoutY="291.0" />
+      <Label layoutX="326.0" layoutY="292.0" prefHeight="24.0" prefWidth="90.0" text="Ngày tổ chức">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font></Label>
+      <Button layoutX="203.0" layoutY="304.0" mnemonicParsing="false" onAction="#chooseImage" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="Chọn ảnh" />
+      <Label layoutX="326.0" layoutY="161.0" prefHeight="28.0" prefWidth="90.0" text="Giờ bắt đầu">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font></Label>
+      <Label layoutX="326.0" layoutY="214.0" prefHeight="28.0" prefWidth="90.0" text="Giờ kết thúc">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font></Label>
+      <ComboBox fx:id="hStart" layoutX="436.0" layoutY="161.0" prefHeight="25.0" prefWidth="56.0" />
+      <ComboBox fx:id="hEnd" layoutX="436.0" layoutY="214.0" prefHeight="25.0" prefWidth="56.0" />
+      <ComboBox fx:id="mStart" layoutX="540.0" layoutY="162.0" prefHeight="25.0" prefWidth="56.0" />
+      <ComboBox fx:id="mEnd" layoutX="540.0" layoutY="214.0" prefHeight="25.0" prefWidth="56.0" />
+      <Label layoutX="506.0" layoutY="166.0" text="giờ" />
+      <Label layoutX="506.0" layoutY="218.0" text="giờ" />
+      <Label layoutX="603.0" layoutY="166.0" text="phút" />
+      <Label layoutX="603.0" layoutY="219.0" text="phút" />
+      <Button layoutX="583.0" layoutY="376.0" mnemonicParsing="false" onAction="#backButton" prefHeight="32.0" prefWidth="67.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="Huỷ" />
+      <Pane prefHeight="78.0" prefWidth="700.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <Label layoutX="67.0" layoutY="27.0" prefHeight="24.0" prefWidth="151.0" text="Thay đổi hội nghị" textFill="#23428a">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

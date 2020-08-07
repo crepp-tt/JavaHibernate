@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="430.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ManageConfAdminController">
+   <children>
+      <Pane layoutX="3.0" prefHeight="78.0" prefWidth="700.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <Label layoutX="67.0" layoutY="27.0" prefHeight="24.0" prefWidth="151.0" text="Quản lý hội nghị" textFill="#23428a">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="17.0" />
+               </font>
+            </Label>
+            <Button layoutX="564.0" layoutY="25.0" mnemonicParsing="false" onAction="#addConf" prefHeight="21.0" prefWidth="122.0" styleClass="button3" stylesheets="@../css/fullpackstyling.css" text="Thêm hội nghị">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/output.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+      <TableView fx:id="tableView" layoutY="73.0" prefHeight="367.0" prefWidth="706.0" style="-fx-background-color: #ffffff;">
+        <columns>
+          <TableColumn fx:id="name" prefWidth="159.0" text="Tên hội nghị" />
+          <TableColumn fx:id="address" prefWidth="215.0" text="Địa điểm" />
+            <TableColumn fx:id="startTime" prefWidth="178.0" text="Bắt đầu" />
+            <TableColumn fx:id="endTime" prefWidth="153.0" text="Kết thúc" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

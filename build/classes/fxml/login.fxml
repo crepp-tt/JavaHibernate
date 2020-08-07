@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginController">
+   <children>
+      <BorderPane prefHeight="400.0" prefWidth="600.0">
+         <left>
+            <Pane prefHeight="400.0" prefWidth="287.0" styleClass="linear-grad" stylesheets="@../css/fullpackstyling.css" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="94.0" fitWidth="87.0" layoutX="100.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/meeting_room_80px.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="63.0" layoutY="220.0" text="Quản lý hội nghị" textFill="#31374d">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+               </children></Pane>
+         </left>
+         <center>
+            <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane fx:id="signupScene" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                     <children>
+                        <TextField fx:id="usernameSignUp" layoutX="36.0" layoutY="111.0" prefHeight="32.0" prefWidth="196.0" promptText="Tên đăng nhập" />
+                        <Label layoutX="50.0" layoutY="57.0" text="Đăng ký" textFill="#1f3ce1">
+                           <font>
+                              <Font name="Times New Roman" size="18.0" />
+                           </font>
+                        </Label>
+                        <PasswordField fx:id="password1" layoutX="36.0" layoutY="245.0" promptText="Mật khẩu" />
+                        <TextField fx:id="email" layoutX="36.0" layoutY="200.0" prefHeight="32.0" prefWidth="196.0" promptText="Email" />
+                        <Button layoutX="9.0" layoutY="14.0" minWidth="36.0" mnemonicParsing="false" onAction="#getSignIn" prefHeight="32.0" prefWidth="36.0" style="-fx-background-color: #ffffff;" text="Button">
+                           <graphic>
+                              <ImageView fitHeight="27.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons/back_arrow_30px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <PasswordField fx:id="password2" layoutX="36.0" layoutY="287.0" promptText="Nhập lại mật khẩu" />
+                        <Button fx:id="btnSignUp" layoutX="178.0" layoutY="339.0" mnemonicParsing="false" onAction="#signUp" prefHeight="37.0" prefWidth="90.0" style="-fx-background-radius: 5;" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="Đăng ký" />
+                        <TextField fx:id="name" layoutX="36.0" layoutY="157.0" prefHeight="30.0" prefWidth="195.0" promptText="Họ và tên" />
+                     </children>
+                  </Pane>
+                  <Pane fx:id="signinScene" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                     <children>
+                        <TextField fx:id="usernameSignIn" layoutX="37.0" layoutY="119.0" prefHeight="32.0" prefWidth="196.0" promptText="Tên đăng nhập" />
+                        <PasswordField fx:id="passwordSignIn" layoutX="37.0" layoutY="182.0" prefHeight="37.0" prefWidth="163.0" promptText="Mật khẩu" />
+                        <Button fx:id="btnSignIn" layoutX="200.0" layoutY="256.0" mnemonicParsing="false" onAction="#signIn" prefHeight="37.0" prefWidth="90.0" style="-fx-background-radius: 5;" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="Đăng nhập" />
+                        <Label layoutX="47.0" layoutY="60.0" text="Đăng nhập" textFill="#1f3ce1">
+                           <font>
+                              <Font name="Times New Roman" size="18.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="47.0" layoutY="321.0" mnemonicParsing="false" onAction="#getSignUp" prefHeight="49.0" prefWidth="219.0" styleClass="button3" stylesheets="@../css/fullpackstyling.css" text="Đăng ký" />
+                     </children>
+                  </Pane>
+               </children>
+            </StackPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

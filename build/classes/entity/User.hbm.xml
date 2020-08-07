@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 31, 2020 10:02:53 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="entity.User" table="user" catalog="ql_hoi_nghi" optimistic-lock="version">
+        <id name="idUser" type="int">
+            <column name="id_user" />
+            <generator class="assigned" />
+        </id>
+        <property name="ten" type="string">
+            <column name="ten" length="45" not-null="true" />
+        </property>
+        <property name="username" type="string">
+            <column name="username" length="45" not-null="true" />
+        </property>
+        <property name="password" type="string">
+            <column name="password" not-null="true" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="45" not-null="true" />
+        </property>
+        <property name="isAdmin" type="int">
+            <column name="isAdmin" not-null="true" />
+        </property>
+        <property name="isBan" type="java.lang.Integer">
+            <column name="isBan" />
+        </property>
+        <set name="thamGiaHns" table="tham_gia_hn" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="id_user" not-null="true" />
+            </key>
+            <one-to-many class="entity.ThamGiaHn" />
+        </set>
+    </class>
+</hibernate-mapping>

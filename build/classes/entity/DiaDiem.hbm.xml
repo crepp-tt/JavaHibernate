@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 31, 2020 10:02:53 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="entity.DiaDiem" table="dia_diem" catalog="ql_hoi_nghi" optimistic-lock="version">
+        <id name="idDiaDiem" type="int">
+            <column name="id_dia_diem" />
+            <generator class="assigned" />
+        </id>
+        <property name="ten" type="string">
+            <column name="ten" length="45" not-null="true" />
+        </property>
+        <property name="diaChi" type="string">
+            <column name="dia_chi" length="45" not-null="true" />
+        </property>
+        <property name="sucChua" type="int">
+            <column name="suc_chua" not-null="true" />
+        </property>
+        <set name="dsHoiNghis" table="ds_hoi_nghi" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="dia_diem" not-null="true" />
+            </key>
+            <one-to-many class="entity.DsHoiNghi" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="442.0" prefWidth="700.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ChangeProfileController">
+   <children>
+      <Pane prefHeight="78.0" prefWidth="700.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <Label layoutX="67.0" layoutY="27.0" prefHeight="24.0" prefWidth="151.0" text="Thay đổi thông tin" textFill="#23428a">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label layoutX="35.0" layoutY="105.0" prefHeight="34.0" prefWidth="59.0" text="Tên" />
+      <Label layoutX="36.0" layoutY="170.0" prefHeight="34.0" prefWidth="67.0" text="Email" />
+      <Button fx:id="btnChange" layoutX="318.0" layoutY="358.0" mnemonicParsing="false" onAction="#change" styleClass="button3" stylesheets="@../css/fullpackstyling.css" text="Thay đổi " />
+      <TextField fx:id="name" layoutX="158.0" layoutY="109.0" prefHeight="25.0" prefWidth="272.0" />
+      <TextField fx:id="email" layoutX="158.0" layoutY="174.0" prefHeight="25.0" prefWidth="272.0" />
+      <Label layoutX="35.0" layoutY="233.0" prefHeight="34.0" prefWidth="74.0" text="Mật khẩu mới" />
+      <Label layoutX="35.0" layoutY="291.0" prefHeight="34.0" prefWidth="97.0" text="Nhập lại mật khẩu" />
+      <PasswordField fx:id="newPass1" layoutX="158.0" layoutY="237.0" />
+      <PasswordField fx:id="newPass2" layoutX="158.0" layoutY="296.0" />
+   </children>
+</AnchorPane>

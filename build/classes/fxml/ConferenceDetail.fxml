@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="442.0" prefWidth="700.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ConfDetailController">
+   <children>
+       <Pane prefHeight="78.0" prefWidth="700.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <Button layoutX="14.0" layoutY="20.0" mnemonicParsing="false" onAction="#backButton" style="-fx-background-color: #ffff;">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/back_arrow_30px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label layoutX="73.0" layoutY="27.0" prefHeight="24.0" prefWidth="144.0" text="Chi tiết hội nghị" textFill="#23428a">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label layoutX="480.0" layoutY="88.0" prefHeight="38.0" prefWidth="88.0" text="Mô tả chi tiết">
+         <font>
+            <Font name="Times New Roman" size="13.0" />
+         </font></Label>
+      <Label layoutX="32.0" layoutY="88.0" prefHeight="38.0" prefWidth="88.0" text="Tên hội nghị">
+         <font>
+            <Font name="Times New Roman" size="13.0" />
+         </font></Label>
+      <ImageView fx:id="imageView" fitHeight="150.0" fitWidth="200.0" layoutX="37.0" layoutY="261.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="btnJoin" layoutX="580.0" layoutY="386.0" mnemonicParsing="false" onAction="#joinConf" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="Tham gia">
+         <font>
+            <Font name="Times New Roman" size="13.0" />
+         </font></Button>
+      <Button layoutX="412.0" layoutY="386.0" mnemonicParsing="false" onAction="#getAttendList" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="Danh sách tham dự">
+         <font>
+            <Font name="Times New Roman" size="13.0" />
+         </font></Button>
+      <Label layoutX="32.0" layoutY="138.0" prefHeight="38.0" prefWidth="59.0" text="Mô tả">
+         <font>
+            <Font name="Times New Roman" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="286.0" layoutY="280.0" prefHeight="38.0" prefWidth="105.0" text="Thời gian bắt đầu">
+         <font>
+            <Font name="Times New Roman" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="286.0" layoutY="336.0" prefHeight="38.0" prefWidth="105.0" text="Thời gian kết thúc">
+         <font>
+            <Font name="Times New Roman" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="32.0" layoutY="192.0" prefHeight="38.0" prefWidth="71.0" text="Sức chứa">
+         <font>
+            <Font name="Times New Roman" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="confName" layoutX="120.0" layoutY="88.0" prefHeight="38.0" prefWidth="200.0" styleClass="text-input" stylesheets="@../css/fullpackstyling.css" text="confName" />
+      <Label fx:id="confDesc" layoutX="120.0" layoutY="138.0" prefHeight="38.0" prefWidth="200.0" styleClass="text-input" stylesheets="@../css/fullpackstyling.css" text="confDesc" />
+      <Label fx:id="capacity" layoutX="120.0" layoutY="192.0" prefHeight="38.0" prefWidth="200.0" styleClass="text-input" stylesheets="@../css/fullpackstyling.css" text="capacity" />
+      <Label fx:id="timeStart" layoutX="403.0" layoutY="280.0" prefHeight="38.0" prefWidth="272.0" styleClass="text-input" stylesheets="@../css/fullpackstyling.css" text="timeStart" />
+      <Label fx:id="timeEnd" layoutX="403.0" layoutY="336.0" prefHeight="38.0" prefWidth="272.0" styleClass="text-input" stylesheets="@../css/fullpackstyling.css" text="timeEnd" />
+      <Label fx:id="longDesc" alignment="TOP_LEFT" contentDisplay="RIGHT" layoutX="380.0" layoutY="126.0" prefHeight="111.0" prefWidth="289.0" styleClass="text-input" stylesheets="@../css/fullpackstyling.css" text="Label" textFill="#171717" />
+   </children>
+</AnchorPane>
